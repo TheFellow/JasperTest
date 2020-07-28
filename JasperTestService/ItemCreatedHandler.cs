@@ -6,7 +6,7 @@ namespace JasperTestService
     public class ItemCreatedHandler
     {
         private readonly ILogger _logger;
-        public ItemCreatedHandler(ILogger logger) => _logger = logger;
+        public ItemCreatedHandler(ILogger<ItemCreatedHandler> logger) => _logger = logger;
 
         public void Handle(ItemCreated itemCreated)
         {
