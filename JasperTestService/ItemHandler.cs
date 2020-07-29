@@ -12,11 +12,10 @@ namespace JasperTestService
         }
 
         [Transactional]
-        public ItemCreated Handle(CreateItemCommand command)
+        public void Handle(CreateItemCommand command)
         {
             var item = new Item { Name = command.Name };
             _dbContext.Items.Add(item);
-            return new ItemCreated { Id = item.Id };
         }
     }
 }

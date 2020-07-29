@@ -23,7 +23,7 @@ namespace JasperTestService
 
             Extensions.UseEntityFrameworkCorePersistence();
 
-            Services.AddDbContext<ItemsDbContext>(x => x.UseSqlServer(connectionString));
+            Services.AddDbContext<ItemsDbContext>(x => x.UseSqlServer(connectionString), ServiceLifetime.Singleton);
         }
     }
 }
